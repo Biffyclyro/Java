@@ -44,6 +44,10 @@ public class Cliente {
     public String getCpf(){
         return cpf;
     }
+    
+    public Cliente(){
+    }
+    
     public Cliente(String cpf){
         System.out.println("Criando cliente...");
         setCpf(cpf);
