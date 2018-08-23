@@ -1,28 +1,47 @@
-package utilities;
-import model.Clientes;
+package visao;
+import java.util.ArrayList;
+import model.Cliente;
 import model.Rota;
 
 public class Test {
     public static void main(String args[]){
-        Clientes c1 = new Clientes();
-        c1.nome = "Marcos";
-        c1.cpf = "02133023";
-        c1.numero = 99999999;
-        c1.rua = "Baura";
+        Cliente cli = new Cliente();
+        cli.setNome("Fulano");
+        cli.setRua("Bla bla bla");
+        cli.setNumero(99999999);
+        cli.setCpf("32139213");
         
         
-        //segundo cliente
-        Clientes c2 = new Clientes();
-        c2.nome = "Marecelo";
-        c2.cpf = "032312940";
-        c2.numero = 92913923;
-        c2.rua = "Cadju";
+        
+        Cliente cli1 = new Cliente();
+        cli1.setNome("Beltrano");
+        cli1.setRua("Bla bla bla");
+        cli1.setNumero(9312434);
+        cli1.setCpf("32134324324");
+        
+        ArrayList<Cliente>clientes = new ArrayList<>();
+        clientes.add(cli);
+        clientes.add(cli1);
         
         
-        Rota baura = new Rota();
-        baura.lista.add(c1);
-        baura.lista.add(c2);
         
-        System.out.println(baura.lista);
+        Rota rota = new Rota();
+        rota.setNome("Camobi - centro");
+        rota.setPontosEntrega(clientes);
+        imprimeRota(rota);
+        
+        }
+    
+    private static void imprimeRota(Rota rota){
+            System.out.println("Nome: "+ rota.getNome());
+            System.out.println("Pontos de Entrega******");
+            
+            for (int i = 0; i < rota.getPontosEntrega().size(); i++){
+                Cliente c = rota.getPontosEntrega().get(i);
+                System.out.println("Nome: "+ c.getNome());
+            }
+        
+        //System.out.println("Nome do cliente: " + cli.getNome()+ " " + cli.getRua()+ " " + cli.getNumero()+ " " + cli.getCpf());
     }
+    
 }
