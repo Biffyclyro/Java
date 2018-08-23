@@ -1,15 +1,28 @@
-package utilidades;
-import model.Cliente;
+package utilities;
+import model.Clientes;
+import model.Rota;
 
-public class Teste {
-    public static void main(String ars[]){
-        Cliente c1 = new Cliente();
-        c1.nome = "Fulano";
-        c1.rua = "Bla bla bla";
-        c1.numero = 99239399;
-        c1.cpf = "00323200032";       
+public class Test {
+    public static void main(String args[]){
+        Clientes c1 = new Clientes();
+        c1.nome = "Marcos";
+        c1.cpf = "02133023";
+        c1.numero = 99999999;
+        c1.rua = "Baura";
         
-        System.out.println(c1.apresentacao());
-        System.out.println(c1.comprar(2));
+        
+        //segundo cliente
+        Clientes c2 = new Clientes();
+        c2.nome = "Marecelo";
+        c2.cpf = "032312940";
+        c2.numero = 92913923;
+        c2.rua = "Cadju";
+        
+        
+        Rota baura = new Rota();
+        baura.lista.add(c1);
+        baura.lista.add(c2);
+        
+        System.out.println(baura.lista);
     }
 }
