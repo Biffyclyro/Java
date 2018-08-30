@@ -17,7 +17,7 @@ public class Test {
         Pessoa p2 = new Pessoa("Beltrano", 5.5f);
         
         Churrasco churras = new Churrasco("Rua Conceição Walthier", ass1);
-        ArrayList<Pessoa> participante = new ArrayList<>();
+        
         churras.entrarParticipantes(p1);
         churras.entrarParticipantes(p2);
         
