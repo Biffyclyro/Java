@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Churrasco {
     private String end;
     private Assador assador;
-    private ArrayList<Pessoa> participante;
+    private ArrayList<Pessoa> participante = new ArrayList();
 
     public Churrasco(String end, Assador assador) {
         this.end = end;
